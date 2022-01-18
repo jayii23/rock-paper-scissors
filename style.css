@@ -3,3 +3,10 @@ h1 {
     color:blue;
     text-align: center;
 }
+
+p {
+    display: flex;
+    margin-right: 4em;
+    margin-left: 4em;
+    font-size: large;
+}
