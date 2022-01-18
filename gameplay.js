@@ -61,9 +61,27 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
-
 //Function game() - play a 5 round game and keep score
     //must use previous function within it
     //use console.log to display results of each round and overall winner
     //use prompt() to get input from user
     //feel free to create more helper functions
+
+function game() {
+    let playerScore = 0;
+    let computerScore = 0;
+    let numRounds = 5;
+    let result;
+
+    for (let i = numRounds; i > 0; i--) {
+        result = (playRound(window.prompt(), computerPlay()));
+        console.log(result);
+
+        //adjust players scores based on "you win..."
+        
+    }
+}
+
+//run master function
+
+game();
