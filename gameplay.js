@@ -72,16 +72,35 @@ function game() {
     let computerScore = 0;
     let numRounds = 5;
     let result;
+    let winner;
 
     for (let i = numRounds; i > 0; i--) {
         result = (playRound(window.prompt(), computerPlay()));
         console.log(result);
 
         //adjust players scores based on "you win..."
-        
+        if (result.charAt(4) == 'l') {
+            computerScore++;
+        }
+        else if (result.charAt(4) == 'w') {
+            playerScore++;
+        }
+
     }
+
+    if (playerScore > computerScore) {
+        winner = `Congratulations! You won this game by a score of ${playerScore} to ${computerScore}.`;
+    }
+    else if (playerScore < computerScore) {
+        winner = `Sorry! You lost this game by a score of ${playerScore} to ${computerScore}.`;
+    }
+    else {
+        winner = `Looks like this game was a draw! Player: ${playerScore} Computer: ${computerScore}`;
+    }
+
+    return winner;
 }
 
 //run master function
 
-game();
+console.log(game());
