@@ -21,13 +21,13 @@ function computerPlay() {
     return move;
 }
 
-function playerChoice(buttonId) {
-    if (buttonId == null) {
-        return "No Input";
-    }
-    console.log(buttonId)
-    return buttonId;
-}
+// function playerChoice(buttonId) {
+//     if (buttonId == null) {
+//         return "No Input";
+//     }
+//     console.log(buttonId)
+//     return buttonId;
+// }
 
 function playRound(playerSelection, computerSelection) {
 
@@ -68,7 +68,7 @@ function getPlayerChoice() {
     //wait for user to click button
     //return result of button they click
     //when button is clicked - triggers fxn playerChoice(buttonId)
-    
+
 }
 
 function game() {
@@ -77,11 +77,24 @@ function game() {
     let numRounds = 5;
     let result;
     let winner;
+    let rockButton;
+    let paperButton;
+    let scissorsButton;
+    let playerChoice;
+
+    //add event listeners to get user input
+    rockButton = document.getElementById("Rock");
+    paperButton = document.getElementById("Paper");
+    scissorsButton = document.getElementById("Scissors");
+
+    rockButton.addEventListener('click', () => {playerChoice = "Rock"});
+    paperButton.addEventListener('click', () => {playerChoice = "Paper"});
+    scissorsButton.addEventListener('click', () => {playerChoice = "Scissors"});
 
     while (playerScore < 5 && computerScore <5) {
 
         //get player choice and do not proceede until choice given
-        result = (playRound(getPlayerChoice(), computerPlay()));
+        result = (playRound(playerChoice, computerPlay()));
         console.log(result);
 
         //adjust players scores based on "you win..."
