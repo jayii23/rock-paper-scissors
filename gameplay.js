@@ -16,8 +16,7 @@ function computerPlay() {
 
         case (3): move = "Scissors";
         break;
-
-    }
+     }
 
     return move;
 }
@@ -74,7 +73,8 @@ function game() {
     let result;
     let winner;
 
-    for (let i = numRounds; i > 0; i--) {
+    while (playerScore < 5 OR computerScore <5) {
+        
         result = (playRound(window.prompt(), computerPlay()));
         console.log(result);
 
@@ -103,4 +103,4 @@ function game() {
 
 //run master function
 
-console.log(game());
+//console.log(game());
