@@ -21,6 +21,10 @@ function computerPlay() {
     return move;
 }
 
+function playerChoice(buttonId) {
+    return buttonId;
+}
+
 //Function playRound(playerSelection, computerSelection) - play 1 round of game
     //return string that declares winner of round
     //get computerSelection using function computerPlay
@@ -75,7 +79,7 @@ function game() {
 
     while (playerScore < 5 && computerScore <5) {
 
-        result = (playRound(window.prompt(), computerPlay()));
+        result = (playRound(playerChoice(), computerPlay()));
         console.log(result);
 
         //adjust players scores based on "you win..."
