@@ -22,6 +22,10 @@ function computerPlay() {
 }
 
 function playerChoice(buttonId) {
+    if (buttonId == null) {
+        return "No Input";
+    }
+    console.log(buttonId)
     return buttonId;
 }
 
@@ -34,8 +38,10 @@ function playerChoice(buttonId) {
 function playRound(playerSelection, computerSelection) {
 
     //convert players selection to properly capitalized move
-    playerSelection.toLowerCase();
-    playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
+    //playerSelection.toLowerCase();
+    //playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
+    console.log(playerSelection)
+    console.log(computerSelection)
 
     if (playerSelection == computerSelection) {
         return "This round was a draw!";
@@ -64,22 +70,19 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
-//Function game() - play a 5 round game and keep score
-    //must use previous function within it
-    //use console.log to display results of each round and overall winner
-    //use prompt() to get input from user
-    //feel free to create more helper functions
-
 function game() {
     let playerScore = 0;
     let computerScore = 0;
     let numRounds = 5;
     let result;
     let winner;
+    let playerMove;
 
     while (playerScore < 5 && computerScore <5) {
 
-        result = (playRound(playerChoice(), computerPlay()));
+        //get player choice and do not proceede until choice given
+
+        result = (playRound(playerMove, computerPlay()));
         console.log(result);
 
         //adjust players scores based on "you win..."
