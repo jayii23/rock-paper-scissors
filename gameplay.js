@@ -73,7 +73,7 @@ function game() {
     let result;
     let winner;
 
-    while (playerScore < 5 OR computerScore <5) {
+    while (playerScore < 5 && computerScore <5) {
 
         result = (playRound(window.prompt(), computerPlay()));
         console.log(result);
@@ -81,11 +81,11 @@ function game() {
         //adjust players scores based on "you win..."
         if (result.charAt(4) == 'l') {
             computerScore++;
-            document.getElementById("computerScore").innerHTML = computerScore
+            document.getElementById("computerScore").innerHTML = computerScore;
         }
         else if (result.charAt(4) == 'w') {
             playerScore++;
-            document.getElementById("playerScore").innerHTML = playerScore
+            document.getElementById("playerScore").innerHTML = playerScore;
         }
 
     }
@@ -105,4 +105,4 @@ function game() {
 
 //run master function
 
-//console.log(game());
+console.log(game());
