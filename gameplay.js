@@ -87,9 +87,9 @@ function game() {
     paperButton = document.getElementById("Paper");
     scissorsButton = document.getElementById("Scissors");
 
-    rockButton.addEventListener('click', () => {playerChoice = "Rock"});
-    paperButton.addEventListener('click', () => {playerChoice = "Paper"});
-    scissorsButton.addEventListener('click', () => {playerChoice = "Scissors"});
+    rockButton.addEventListener('click', () => {playerChoice = "Rock";});
+    paperButton.addEventListener('click', () => {playerChoice = "Paper";});
+    scissorsButton.addEventListener('click', () => {playerChoice = "Scissors";});
 
     while (playerScore < 5 && computerScore <5) {
 
