@@ -29,12 +29,6 @@ function playerChoice(buttonId) {
     return buttonId;
 }
 
-//Function playRound(playerSelection, computerSelection) - play 1 round of game
-    //return string that declares winner of round
-    //get computerSelection using function computerPlay
-    //make players selection case-insensitive (rock, rOck, etc..)
-    //make sure to return results, not just console.log them
-
 function playRound(playerSelection, computerSelection) {
 
     //convert players selection to properly capitalized move
@@ -70,19 +64,24 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
+function getPlayerChoice() {
+    //wait for user to click button
+    //return result of button they click
+    //when button is clicked - triggers fxn playerChoice(buttonId)
+    
+}
+
 function game() {
     let playerScore = 0;
     let computerScore = 0;
     let numRounds = 5;
     let result;
     let winner;
-    let playerMove;
 
     while (playerScore < 5 && computerScore <5) {
 
         //get player choice and do not proceede until choice given
-
-        result = (playRound(playerMove, computerPlay()));
+        result = (playRound(getPlayerChoice(), computerPlay()));
         console.log(result);
 
         //adjust players scores based on "you win..."
