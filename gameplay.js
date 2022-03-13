@@ -83,10 +83,17 @@ function updateScoreOnScreen() {
 }
 
 function restartGame(winner) {
-    document.getElementsByClassName('.game-screen').style.display = "none";
+
+    //hide the game screen
+    document.querySelector(".game-screen").style.display = 'none';
+    console.log("Game screen hidden...")
+
     playerScore = 0;
     computerScore = 0;
-    document.getElementsByClassName('.end-game').style.display = "block";
+
+    //show reset screen
+    document.querySelector(".end-game").style.display = 'block';
+
     //add event listener for button
     //if button clicked then reset everything
 }
