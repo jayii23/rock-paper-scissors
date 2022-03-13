@@ -1,5 +1,9 @@
 //INSTRUCTIONS --> https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/rock-paper-scissors#assignment
 
+//Global Variables
+let playerScore = 0;
+let computerScore = 0;
+
 //Function computerPlay - have computer randomly choose rock, paper, scissors
 function computerPlay() {
     let move;
@@ -102,13 +106,13 @@ function game() {
 }
 
 function checkScore() {
-    if (playerScore >= 5 || computerScore >= 5) {
         if (playerScore >= 5) {
             console.log("You Win!")
-        } else {
+        } else if (computerScore >= 5){
             console.log("You Lose!")
+        } else {
+            console.log("No winner yet...")
         }
-    }
 }
 
 //run master function
@@ -117,8 +121,8 @@ function checkScore() {
 
 
 //Game Logic
-let playerScore = 0;
-let computerScore = 0;
+// let playerScore = 0;
+// let computerScore = 0;
 //add event listeners
     //when button clicked - playRound
         //when round played - check score
@@ -130,6 +134,20 @@ rockButton = document.getElementById("Rock");
 paperButton = document.getElementById("Paper");
 scissorsButton = document.getElementById("Scissors");
 
-rockButton.addEventListener('click', () => {playRound("Rock", computerPlay()); checkScore});
-paperButton.addEventListener('click', () => {playRound("Paper", computerPlay()); checkScore});
-scissorsButton.addEventListener('click', () => {playRound("Scissors", computerPlay()); checkScore});
+rockButton.addEventListener('click', () => {
+    playRound("Rock", computerPlay()); 
+    checkScore();
+    console.log("Player Score: " + playerScore + " Computer Score: " + computerScore);
+});
+
+paperButton.addEventListener('click', () => {
+    playRound("Paper", computerPlay()); 
+    checkScore();
+    console.log("Player Score: " + playerScore + " Computer Score: " + computerScore);
+});
+
+scissorsButton.addEventListener('click', () => {
+    playRound("Scissors", computerPlay()); 
+    checkScore();
+    console.log("Player Score: " + playerScore + " Computer Score: " + computerScore);
+});
