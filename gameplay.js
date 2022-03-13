@@ -67,18 +67,27 @@ function checkScore() {
         if (playerScore >= 5) {
             console.log("You Win!")
             document.getElementById("game-results").innerHTML = "You Win!";
+            restartGame("Player");
         } else if (computerScore >= 5){
             console.log("You Lose!")
             document.getElementById("game-results").innerHTML = "You Lose!";
+            restartGame("Computer");
         } else {
             console.log("No winner yet...")
-            document.getElementById("game-results").innerHTML = "No winner yet...";
         }
 }
 
 function updateScoreOnScreen() {
     document.getElementById("playerScore").innerHTML = playerScore;
     document.getElementById("computerScore").innerHTML = computerScore;
+}
+
+function restartGame(winner) {
+    document.querySelectorAll('.game-screen').forEach.setAttribute('visibility', 'hidden')
+    playerScore = 0;
+    computerScore = 0;
+    //display form with button to restart
+    
 }
 
 //Game Logic
@@ -110,8 +119,6 @@ scissorsButton.addEventListener('click', () => {
 });
 
 //To Do:
-    //1) Write new score to html at the end of each round
-    //2) Write result of round to html at the end of each round
-    //3) When player reaches 5 - display winner in html and prevent another game from being played
+    //3) When score reaches 5 - prevent another game from being played
     //4) Format HTML to look nice
     //5) Add images to buttons for better UX
