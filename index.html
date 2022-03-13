@@ -8,24 +8,26 @@
     <title>Rock Paper Scissors!</title>
 </head>
 <body>
-    <h1>GUI Coming Soon(ish)!</h1>
-    <p>For now... enter either rock, paper, or scissors into the prompt. When the prompts no longer
-        show up the game is over and you can view your results by right-clicking anywhere on the page and selecting 'inspect'
-        . This will open a panel on the right side of your browser (preferrably google chrome). At the very top of this new panel 
-        select 'Console'. Now you should be able to view the results of each round and the total results! 
+    <h1>GUI in Progress!</h1>
+    <p>Welcome to Rock! Paper! Scissors! 
     </p>
     <p>If you would like to play another round, simply refresh the page!</p>
 
-    <div>
+    <div class = "end-game">
+        <p>Would you like to play again?</p>
+        <button id="play-again">Rematch!</button>
+    </div>
+
+    <div class="game-screen">
         <p id="game-results">
         </p>
 
         <p id="round-results">
         </p>
     </div>    
-    <button class = "player-choices" id="Rock">Rock</button>
-    <button class = "player-choices" id="Paper">Paper</button>
-    <button class = "player-choices" id="Scissors">Scissors</button>
+    <button class = "game-screen" id="Rock">Rock</button>
+    <button class = "game-screen" id="Paper">Paper</button>
+    <button class = "game-screen" id="Scissors">Scissors</button>
 
     <p>You: </p><p id="playerScore">0</p>
     <p>Computer: </p><p id="computerScore">0</p>
