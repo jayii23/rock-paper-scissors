@@ -117,31 +117,30 @@ function checkScore() {
 
 //Game Logic
 
-    //playRound - write result to html doc
-        //when round played - check score
-            //if one players score = 5 - display winner to html doc
-
 //add event listeners to get user input
 rockButton = document.getElementById("Rock");
 paperButton = document.getElementById("Paper");
 scissorsButton = document.getElementById("Scissors");
 
 rockButton.addEventListener('click', () => {
-    playRound("Rock", computerPlay()); 
+    playRound("Rock", computerPlay());  //returns text of who won
     checkScore();
     console.log("Player Score: " + playerScore + " Computer Score: " + computerScore);
+    //write result to screen + winner (if applicable)
 });
 
 paperButton.addEventListener('click', () => {
     playRound("Paper", computerPlay()); 
     checkScore();
     console.log("Player Score: " + playerScore + " Computer Score: " + computerScore);
+    //write result to screen + winner (if applicable)
 });
 
 scissorsButton.addEventListener('click', () => {
     playRound("Scissors", computerPlay()); 
     checkScore();
     console.log("Player Score: " + playerScore + " Computer Score: " + computerScore);
+    //write result to screen + winner (if applicable)
 });
 
 //To Do:
