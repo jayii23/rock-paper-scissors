@@ -83,10 +83,10 @@ function updateScoreOnScreen() {
 }
 
 function restartGame(winner) {
-    document.querySelectorAll('.game-screen').forEach.setAttribute('visibility', 'hidden');
+    document.getElementsByClassName('.game-screen').style.display = "none";
     playerScore = 0;
     computerScore = 0;
-    document.querySelectorAll('.end-game').forEach.setAttribute('visibility', 'visible');
+    document.getElementsByClassName('.end-game').style.display = "block";
     //add event listener for button
     //if button clicked then reset everything
 }
