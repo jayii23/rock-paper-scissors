@@ -14,3 +14,17 @@ p {
 .end-game {
     display: none;
 }
+
+.score-container {
+
+}
+
+#player-score-container {
+    color: blue;
+    display: inline-block;
+}
+
+#computer-score-container {
+    color: red;
+    display: inline-block;
+}
