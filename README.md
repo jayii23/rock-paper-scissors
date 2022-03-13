@@ -1,5 +1,5 @@
 # rock-paper-scissors
 Creating rock, paper, scissors using javascript
 
-Will be played from the console (for now).
-Focus on working from pseudocode and usings functions appropriately.
+Will be played with a user interface that is manipulated using javascript.
+Focus on working with DOM selectors + writing modular code.
