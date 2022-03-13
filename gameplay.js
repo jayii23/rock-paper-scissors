@@ -63,48 +63,6 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
-function game() {
-    let playerScore = 0;
-    let computerScore = 0;
-    let numRounds = 5;
-    let result;
-    let winner;
-    let rockButton;
-    let paperButton;
-    let scissorsButton;
-    let playerChoice;
-
-    while (playerScore < 5 && computerScore <5) {
-
-        //get player choice and do not proceede until choice given
-        result = (playRound(playerChoice, computerPlay()));
-        //console.log(result);
-
-        //adjust players scores based on "you win..."
-        if (result.charAt(4) == 'l') {
-            computerScore++;
-            document.getElementById("computerScore").innerHTML = computerScore;
-        }
-        else if (result.charAt(4) == 'w') {
-            playerScore++;
-            document.getElementById("playerScore").innerHTML = playerScore;
-        }
-
-    }
-
-    if (playerScore > computerScore) {
-        winner = `Congratulations! You won this game by a score of ${playerScore} to ${computerScore}.`;
-    }
-    else if (playerScore < computerScore) {
-        winner = `Sorry! You lost this game by a score of ${playerScore} to ${computerScore}.`;
-    }
-    else {
-        winner = `Looks like this game was a draw! Player: ${playerScore} Computer: ${computerScore}`;
-    }
-
-    return winner;
-}
-
 function checkScore() {
         if (playerScore >= 5) {
             console.log("You Win!")
