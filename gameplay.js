@@ -83,11 +83,12 @@ function updateScoreOnScreen() {
 }
 
 function restartGame(winner) {
-    document.querySelectorAll('.game-screen').forEach.setAttribute('visibility', 'hidden')
+    document.querySelectorAll('.game-screen').forEach.setAttribute('visibility', 'hidden');
     playerScore = 0;
     computerScore = 0;
-    //display form with button to restart
-    
+    document.querySelectorAll('.end-game').forEach.setAttribute('visibility', 'visible');
+    //add event listener for button
+    //if button clicked then reset everything
 }
 
 //Game Logic
@@ -99,23 +100,23 @@ scissorsButton = document.getElementById("Scissors");
 
 rockButton.addEventListener('click', () => {
     document.getElementById("round-results").innerHTML = playRound("Rock", computerPlay());  //returns text of who won
-    checkScore();
     console.log("Player Score: " + playerScore + " Computer Score: " + computerScore);
     updateScoreOnScreen();
+    checkScore();
 });
 
 paperButton.addEventListener('click', () => {
     document.getElementById("round-results").innerHTML = playRound("Paper", computerPlay()); 
-    checkScore();
     console.log("Player Score: " + playerScore + " Computer Score: " + computerScore);
     updateScoreOnScreen();
+    checkScore();
 });
 
 scissorsButton.addEventListener('click', () => {
     document.getElementById("round-results").innerHTML = playRound("Scissors", computerPlay()); 
-    checkScore();
     console.log("Player Score: " + playerScore + " Computer Score: " + computerScore);
     updateScoreOnScreen();
+    checkScore();
 });
 
 //To Do:
