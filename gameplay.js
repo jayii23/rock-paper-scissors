@@ -88,9 +88,6 @@ function restartGame(winner) {
     document.querySelector(".game-screen").style.display = 'none';
     console.log("Game screen hidden...")
 
-    playerScore = 0;
-    computerScore = 0;
-
     //show reset screen
     document.querySelector(".end-game").style.display = 'block';
 
@@ -104,6 +101,7 @@ function restartGame(winner) {
 rockButton = document.getElementById("Rock");
 paperButton = document.getElementById("Paper");
 scissorsButton = document.getElementById("Scissors");
+rematchButton = document.getElementById("play-again");
 
 rockButton.addEventListener('click', () => {
     document.getElementById("round-results").innerHTML = playRound("Rock", computerPlay());  //returns text of who won
@@ -124,6 +122,17 @@ scissorsButton.addEventListener('click', () => {
     console.log("Player Score: " + playerScore + " Computer Score: " + computerScore);
     updateScoreOnScreen();
     checkScore();
+});
+
+rematchButton.addEventListener('click', () => {
+    playerScore = 0;
+    computerScore = 0;
+
+    //display game-screen
+    document.querySelector(".game-screen").style.display = 'block';
+    
+    //hide end-game screen
+    document.querySelector(".end-game").style.display = 'none';
 });
 
 //To Do:
