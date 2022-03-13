@@ -67,11 +67,11 @@ function checkScore() {
         if (playerScore >= 5) {
             console.log("You Win!")
             document.getElementById("game-results").innerHTML = "You Win!";
-            restartGame("Player");
+            restartGame("You Win!");
         } else if (computerScore >= 5){
             console.log("You Lose!")
             document.getElementById("game-results").innerHTML = "You Lose!";
-            restartGame("Computer");
+            restartGame("The Computer Won!");
         } else {
             console.log("No winner yet...")
         }
@@ -89,6 +89,7 @@ function restartGame(winner) {
     console.log("Game screen hidden...")
 
     //show reset screen
+    document.getElementById("final-winner").innerHTML = winner;
     document.querySelector(".end-game").style.display = 'block';
 
     //add event listener for button
@@ -144,4 +145,3 @@ rematchButton.addEventListener('click', () => {
     //4) Format HTML to look nice
     //5) Add images to buttons for better UX
     //6) display winner text on end-game screen
-    //7) when rematch is clicked - reset scores - clear text from game-screen
