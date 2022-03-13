@@ -95,7 +95,7 @@ function game() {
 
         //get player choice and do not proceede until choice given
         result = (playRound(playerChoice, computerPlay()));
-        console.log(result);
+        //console.log(result);
 
         //adjust players scores based on "you win..."
         if (result.charAt(4) == 'l') {
@@ -125,3 +125,21 @@ function game() {
 //run master function
 
 console.log(game());
+
+
+//Game Logic
+
+//add event listeners
+    //when button clicked - playRound
+        //when round played - check score
+            //if one players score = 5 - display winner
+            //else -disp
+
+//add event listeners to get user input
+rockButton = document.getElementById("Rock");
+paperButton = document.getElementById("Paper");
+scissorsButton = document.getElementById("Scissors");
+
+rockButton.addEventListener('click', () => {playerChoice = "Rock";});
+paperButton.addEventListener('click', () => {playerChoice = "Paper";});
+scissorsButton.addEventListener('click', () => {playerChoice = "Scissors";});
