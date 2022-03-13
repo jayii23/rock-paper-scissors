@@ -21,14 +21,6 @@ function computerPlay() {
     return move;
 }
 
-// function playerChoice(buttonId) {
-//     if (buttonId == null) {
-//         return "No Input";
-//     }
-//     console.log(buttonId)
-//     return buttonId;
-// }
-
 function playRound(playerSelection, computerSelection) {
 
     //convert players selection to properly capitalized move
@@ -42,23 +34,29 @@ function playRound(playerSelection, computerSelection) {
     }
 
     if (playerSelection == "Rock" && computerSelection == "Paper") {
+        computerScore++;
         return `You lose! ${computerSelection} beats ${playerSelection}`;
     }
     else if (playerSelection == "Rock" && computerSelection == "Scissors") {
+        playerScore++;
         return `You win! ${playerSelection} beats ${computerSelection}`;
     }
 
     if (playerSelection == "Paper" && computerSelection == "Rock") {
+        playerScore++;
         return `You win! ${playerSelection} beats ${computerSelection}`;
     }
     else if (playerSelection == "Paper" && computerSelection == "Scissors") {
+        computerScore++;
         return `You lose! ${computerSelection} beats ${playerSelection}`;
     }
     
     if (playerSelection == "Scissors" && computerSelection == "Rock") {
+        computerScore++;
         return `You lose! ${computerSelection} beats ${playerSelection}`;
     }
     else if (playerSelection == "Scissors" && computerSelection == "Paper") {
+        playerScore++;
         return `You win! ${playerSelection} beats ${computerSelection}`;
     }
 
@@ -124,11 +122,12 @@ function game() {
 
 //run master function
 
-console.log(game());
+//console.log(game());
 
 
 //Game Logic
-
+let playerScore = 0;
+let computerScore = 0;
 //add event listeners
     //when button clicked - playRound
         //when round played - check score
@@ -140,6 +139,6 @@ rockButton = document.getElementById("Rock");
 paperButton = document.getElementById("Paper");
 scissorsButton = document.getElementById("Scissors");
 
-rockButton.addEventListener('click', () => {playerChoice = "Rock";});
-paperButton.addEventListener('click', () => {playerChoice = "Paper";});
-scissorsButton.addEventListener('click', () => {playerChoice = "Scissors";});
+rockButton.addEventListener('click', () => {playRound("Rock", computerPlay())});
+paperButton.addEventListener('click', () => {playRound("Paper", computerPlay())});
+scissorsButton.addEventListener('click', () => {playRound("Scissors", computerPlay())});
