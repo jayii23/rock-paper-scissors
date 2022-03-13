@@ -101,6 +101,16 @@ function game() {
     return winner;
 }
 
+function checkScore() {
+    if (playerScore >= 5 || computerScore >= 5) {
+        if (playerScore >= 5) {
+            console.log("You Win!")
+        } else {
+            console.log("You Lose!")
+        }
+    }
+}
+
 //run master function
 
 //console.log(game());
@@ -120,6 +130,6 @@ rockButton = document.getElementById("Rock");
 paperButton = document.getElementById("Paper");
 scissorsButton = document.getElementById("Scissors");
 
-rockButton.addEventListener('click', () => {playRound("Rock", computerPlay())});
-paperButton.addEventListener('click', () => {playRound("Paper", computerPlay())});
-scissorsButton.addEventListener('click', () => {playRound("Scissors", computerPlay())});
+rockButton.addEventListener('click', () => {playRound("Rock", computerPlay()); checkScore});
+paperButton.addEventListener('click', () => {playRound("Paper", computerPlay()); checkScore});
+scissorsButton.addEventListener('click', () => {playRound("Scissors", computerPlay()); checkScore});
