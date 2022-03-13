@@ -118,6 +118,11 @@ function checkScore() {
         }
 }
 
+function updateScoreOnScreen() {
+    document.getElementById("playerScore").innerHTML = playerScore;
+    document.getElementById("computerScore").innerHTML = computerScore;
+}
+
 //Game Logic
 
 //add event listeners to get user input
@@ -129,21 +134,21 @@ rockButton.addEventListener('click', () => {
     document.getElementById("round-results").innerHTML = playRound("Rock", computerPlay());  //returns text of who won
     checkScore();
     console.log("Player Score: " + playerScore + " Computer Score: " + computerScore);
-    //write result to screen + winner (if applicable)
+    updateScoreOnScreen();
 });
 
 paperButton.addEventListener('click', () => {
     document.getElementById("round-results").innerHTML = playRound("Paper", computerPlay()); 
     checkScore();
     console.log("Player Score: " + playerScore + " Computer Score: " + computerScore);
-    //write result to screen + winner (if applicable)
+    updateScoreOnScreen();
 });
 
 scissorsButton.addEventListener('click', () => {
     document.getElementById("round-results").innerHTML = playRound("Scissors", computerPlay()); 
     checkScore();
     console.log("Player Score: " + playerScore + " Computer Score: " + computerScore);
-    //write result to screen + winner (if applicable)
+    updateScoreOnScreen();
 });
 
 //To Do:
