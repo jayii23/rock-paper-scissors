@@ -127,6 +127,10 @@ scissorsButton.addEventListener('click', () => {
 rematchButton.addEventListener('click', () => {
     playerScore = 0;
     computerScore = 0;
+    updateScoreOnScreen();
+
+    document.getElementById("game-results").innerHTML = "";
+    document.getElementById("round-results").innerHTML = "";
 
     //display game-screen
     document.querySelector(".game-screen").style.display = 'block';
@@ -139,3 +143,5 @@ rematchButton.addEventListener('click', () => {
     //3) When score reaches 5 - prevent another game from being played
     //4) Format HTML to look nice
     //5) Add images to buttons for better UX
+    //6) display winner text on end-game screen
+    //7) when rematch is clicked - reset scores - clear text from game-screen
