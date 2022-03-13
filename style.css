@@ -10,3 +10,7 @@ p {
     margin-left: 4em;
     font-size: large;
 }
+
+.end-game {
+    visibility: hidden;
+}
