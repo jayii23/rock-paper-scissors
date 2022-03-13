@@ -24,8 +24,6 @@ function computerPlay() {
 function playRound(playerSelection, computerSelection) {
 
     //convert players selection to properly capitalized move
-    //playerSelection.toLowerCase();
-    //playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
     console.log(playerSelection)
     console.log(computerSelection)
 
