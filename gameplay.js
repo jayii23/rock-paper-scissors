@@ -115,19 +115,11 @@ function checkScore() {
         }
 }
 
-//run master function
-
-//console.log(game());
-
-
 //Game Logic
-// let playerScore = 0;
-// let computerScore = 0;
-//add event listeners
-    //when button clicked - playRound
+
+    //playRound - write result to html doc
         //when round played - check score
-            //if one players score = 5 - display winner
-            //else -disp
+            //if one players score = 5 - display winner to html doc
 
 //add event listeners to get user input
 rockButton = document.getElementById("Rock");
@@ -151,3 +143,10 @@ scissorsButton.addEventListener('click', () => {
     checkScore();
     console.log("Player Score: " + playerScore + " Computer Score: " + computerScore);
 });
+
+//To Do:
+    //1) Write new score to html at the end of each round
+    //2) Write result of round to html at the end of each round
+    //3) When player reaches 5 - display winner in html and prevent another game from being played
+    //4) Format HTML to look nice
+    //5) Add images to buttons for better UX
