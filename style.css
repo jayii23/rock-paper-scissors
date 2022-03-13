@@ -9,6 +9,12 @@ p {
     margin-right: 4em;
     margin-left: 4em;
     font-size: large;
+    justify-content: center;
+}
+
+.game-screen {
+    justify-content: center;
+    align-content: center;
 }
 
 .end-game {
@@ -16,15 +22,17 @@ p {
 }
 
 .score-container {
-
+    
 }
 
 #player-score-container {
     color: blue;
     display: inline-block;
+    
 }
 
 #computer-score-container {
     color: red;
     display: inline-block;
+
 }
