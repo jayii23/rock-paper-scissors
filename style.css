@@ -12,5 +12,5 @@ p {
 }
 
 .end-game {
-    visibility: hidden;
+    display: none;
 }
