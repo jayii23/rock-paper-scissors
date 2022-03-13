@@ -141,7 +141,5 @@ rematchButton.addEventListener('click', () => {
 });
 
 //To Do:
-    //3) When score reaches 5 - prevent another game from being played
     //4) Format HTML to look nice
     //5) Add images to buttons for better UX
-    //6) display winner text on end-game screen
