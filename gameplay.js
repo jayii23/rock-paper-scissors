@@ -108,10 +108,13 @@ function game() {
 function checkScore() {
         if (playerScore >= 5) {
             console.log("You Win!")
+            document.getElementById("game-results").innerHTML = "You Win!";
         } else if (computerScore >= 5){
             console.log("You Lose!")
+            document.getElementById("game-results").innerHTML = "You Lose!";
         } else {
             console.log("No winner yet...")
+            document.getElementById("game-results").innerHTML = "No winner yet...";
         }
 }
 
@@ -123,21 +126,21 @@ paperButton = document.getElementById("Paper");
 scissorsButton = document.getElementById("Scissors");
 
 rockButton.addEventListener('click', () => {
-    playRound("Rock", computerPlay());  //returns text of who won
+    document.getElementById("round-results").innerHTML = playRound("Rock", computerPlay());  //returns text of who won
     checkScore();
     console.log("Player Score: " + playerScore + " Computer Score: " + computerScore);
     //write result to screen + winner (if applicable)
 });
 
 paperButton.addEventListener('click', () => {
-    playRound("Paper", computerPlay()); 
+    document.getElementById("round-results").innerHTML = playRound("Paper", computerPlay()); 
     checkScore();
     console.log("Player Score: " + playerScore + " Computer Score: " + computerScore);
     //write result to screen + winner (if applicable)
 });
 
 scissorsButton.addEventListener('click', () => {
-    playRound("Scissors", computerPlay()); 
+    document.getElementById("round-results").innerHTML = playRound("Scissors", computerPlay()); 
     checkScore();
     console.log("Player Score: " + playerScore + " Computer Score: " + computerScore);
     //write result to screen + winner (if applicable)
