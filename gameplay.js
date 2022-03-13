@@ -23,7 +23,6 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
 
-    //convert players selection to properly capitalized move
     console.log(playerSelection)
     console.log(computerSelection)
 
@@ -60,13 +59,6 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
-function getPlayerChoice() {
-    //wait for user to click button
-    //return result of button they click
-    //when button is clicked - triggers fxn playerChoice(buttonId)
-
-}
-
 function game() {
     let playerScore = 0;
     let computerScore = 0;
@@ -77,15 +69,6 @@ function game() {
     let paperButton;
     let scissorsButton;
     let playerChoice;
-
-    //add event listeners to get user input
-    rockButton = document.getElementById("Rock");
-    paperButton = document.getElementById("Paper");
-    scissorsButton = document.getElementById("Scissors");
-
-    rockButton.addEventListener('click', () => {playerChoice = "Rock";});
-    paperButton.addEventListener('click', () => {playerChoice = "Paper";});
-    scissorsButton.addEventListener('click', () => {playerChoice = "Scissors";});
 
     while (playerScore < 5 && computerScore <5) {
 
