@@ -12,9 +12,30 @@ p {
     justify-content: center;
 }
 
+div {
+    border-width: 4px;
+    border-color: red;
+    border-style: solid;
+}
+
 .game-screen {
+    display: flex;
     justify-content: center;
-    align-content: center;
+    border-width: 4px;
+    border-color: blue;
+    border-style: solid;
+}
+
+#Rock {
+    display: inline-flexbox;
+}
+
+#Paper {
+    display: inline-flexbox;
+}
+
+#Scissors {
+    display: inline-flexbox;
 }
 
 .end-game {
@@ -22,17 +43,28 @@ p {
 }
 
 .score-container {
-    
+    /* border-width: 4px;
+    border-color: yellow;
+    border-style: solid; */
+    display: flex;
+    justify-content: center;
 }
 
 #player-score-container {
     color: blue;
-    display: inline-block;
+    display: inline-flexbox;
     
+    /* border-width: 4px;
+    border-color: green;
+    border-style: solid; */
 }
 
 #computer-score-container {
     color: red;
-    display: inline-block;
+    display: inline-flexbox;
+    border-width: 4px;
+    /* border-color: pink;
+    border-style: solid; */
+    
 
 }
