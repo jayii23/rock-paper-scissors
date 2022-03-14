@@ -90,7 +90,7 @@ function restartGame(winner) {
 
     //show reset screen
     document.getElementById("final-winner").innerHTML = winner;
-    document.querySelector(".end-game").style.display = 'block';
+    document.querySelector(".end-game").style.display = 'flex';
 
     //add event listener for button
     //if button clicked then reset everything

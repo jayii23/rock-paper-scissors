@@ -13,17 +13,36 @@ p {
 }
 
 div {
-    border-width: 4px;
+    /*border-width: 4px;
     border-color: red;
-    border-style: solid;
+    border-style: solid; */
 }
 
 .game-screen {
-    display: flex;
-    justify-content: center;
-    border-width: 4px;
+    /*display: flex;
+    /* justify-content: center; */
+    /*border-width: 4px;
     border-color: blue;
-    border-style: solid;
+    border-style: solid; */
+}
+
+.results {
+    display: flexbox;
+}
+
+.user-choice-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+#game-results {
+    display: flexbox;
+}
+
+#round-results {
+    display: flexbox;
 }
 
 #Rock {
@@ -40,6 +59,16 @@ div {
 
 .end-game {
     display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#play-again {
+    /* padding-left: 40%;
+    padding-right: 40%; */
+    width: 15%;
+    display: flexbox;
+
 }
 
 .score-container {
