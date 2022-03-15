@@ -64,7 +64,7 @@ div {
 
 #Rock {
     display: inline-flexbox;
-    background-color: rgb(177, 30, 30);
+    background-color: #840404;
     width: 8em;
     height: 3em;
     border-radius: 0.5em;
@@ -73,7 +73,7 @@ div {
 
 #Paper {
     display: inline-flexbox;
-    background-color: rgb(177, 30, 30);
+    background-color: #070785;
     width: 8em;
     height: 3em;
     border-radius: 0.5em;
@@ -82,7 +82,7 @@ div {
 
 #Scissors {
     display: inline-flexbox;
-    background-color: rgb(177, 30, 30);
+    background-color: #068506;
     width: 8em;
     height: 3em;
     border-radius: 0.5em;
@@ -100,7 +100,7 @@ div {
     padding-right: 40%; */
     width: 15%;
     display: inline-flexbox;
-    background-color: rgb(177, 30, 30);
+    background-color: #840404;
     width: 8em;
     height: 3em;
     border-radius: 0.5em;
