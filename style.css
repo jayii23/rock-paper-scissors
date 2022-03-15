@@ -64,14 +64,29 @@ div {
 
 #Rock {
     display: inline-flexbox;
+    background-color: rgb(177, 30, 30);
+    width: 8em;
+    height: 3em;
+    border-radius: 0.5em;
+    color: white;
 }
 
 #Paper {
     display: inline-flexbox;
+    background-color: rgb(177, 30, 30);
+    width: 8em;
+    height: 3em;
+    border-radius: 0.5em;
+    color: white;
 }
 
 #Scissors {
     display: inline-flexbox;
+    background-color: rgb(177, 30, 30);
+    width: 8em;
+    height: 3em;
+    border-radius: 0.5em;
+    color: white;
 }
 
 .end-game {
@@ -84,8 +99,13 @@ div {
     /* padding-left: 40%;
     padding-right: 40%; */
     width: 15%;
-    display: flexbox;
-
+    display: inline-flexbox;
+    background-color: rgb(177, 30, 30);
+    width: 8em;
+    height: 3em;
+    border-radius: 0.5em;
+    margin-right: 4em;
+    margin-left: 4em;
 }
 
 .score-container {
@@ -98,7 +118,6 @@ div {
 
 #player-score-container {
     display: inline-flexbox;
-    
     /* border-width: 4px;
     border-color: green;
     border-style: solid; */
