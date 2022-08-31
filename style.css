@@ -4166,3 +4166,10 @@ input, select, textarea {
         margin-right: 25%;
         margin-left: 25%;
     }
+
+    .end-game {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
