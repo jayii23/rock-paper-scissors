@@ -141,5 +141,6 @@ rematchButton.addEventListener('click', () => {
 });
 
 //To Do:
-    //4) Format HTML to look nice
-    //5) Add images to buttons for better UX
+    // - Add images in between score - update w. player and computers choice
+    // - When a round is won - use animation to show rock beating scissors, etc.
+    // - At the end of the game, there are two gray lines at the bottom of the screen - remove to look cleaner
